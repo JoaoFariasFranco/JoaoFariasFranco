@@ -42,58 +42,68 @@
     </filter>
 
     <clipPath id="clip-ascii-reveal">
-      <rect x="0" y="0" width="420" height="0">
-        <animate attributeName="height" from="0" to="480" dur="2s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+      <rect x="-50" y="-20" width="500" height="0">
+        <animate attributeName="height" from="0" to="520" dur="2s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
       </rect>
     </clipPath>
 
     <clipPath id="clip-line1">
-      <rect x="0" y="0" width="0" height="40">
+      <rect x="0" y="-10" width="0" height="60">
         <animate attributeName="width" from="0" to="650" dur="1s" begin="0.8s" fill="freeze" />
       </rect>
     </clipPath>
 
     <clipPath id="clip-line2">
-      <rect x="0" y="0" width="0" height="35">
+      <rect x="0" y="40" width="0" height="50">
         <animate attributeName="width" from="0" to="650" dur="1.2s" begin="1.9s" fill="freeze" />
       </rect>
     </clipPath>
 
     <clipPath id="clip-details">
-      <rect x="0" y="0" width="0" height="180">
+      <rect x="0" y="90" width="0" height="160">
         <animate attributeName="width" from="0" to="650" dur="1.8s" begin="3.2s" fill="freeze" />
       </rect>
     </clipPath>
   </defs>
 
   <style>
-    .mono { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace; white-space: pre;}
     .text-main { fill: #F8FAFC; }
     .text-muted { fill: #94A3B8; }
     .text-accent { fill: #22D3EE; }
     .text-purple { fill: #A78BFA; }
     
-    /* Cursor de Digitação */
     .cursor { animation: blink 0.8s infinite; fill: #22D3EE; }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-    /* Fade-in para Elementos do Estágio Final */
     .fade-in-delayed {
       opacity: 0;
       animation: fadeIn 0.8s forwards 5.2s;
     }
     @keyframes fadeIn { to { opacity: 1; } }
 
-    /* Micro interatividade nas pílulas */
     .pill { transition: transform 0.2s ease, filter 0.2s ease; cursor: pointer; }
     .pill:hover { transform: translateY(-2px) scale(1.03); filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5)); }
+
+    /* Estilo para a arte ASCII da esquerda */
+    .ascii-text {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Courier New", monospace;
+      font-size: 8.5px;      
+      white-space: pre;
+      font-weight: bold;
+    }
+    
+    /* Estilo para as informações da direita */
+    .terminal-text {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Courier New", monospace;
+      font-size: 13px;       
+      letter-spacing: 0.5px; 
+      font-weight: normal;
+    } 
   </style>
 
   <rect width="1180" height="610" rx="16" fill="#030712"/>
   <rect width="1180" height="610" rx="16" fill="url(#bgGlow)"/>
-  
   <rect width="1180" height="610" rx="16" filter="url(#noiseFilter)" />
-
   <rect x="1.5" y="1.5" width="1177" height="607" rx="15" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.4"/>
 
   <g fill="#22D3EE" opacity="0.35">
@@ -105,54 +115,53 @@
 
   <g transform="translate(35, 45)">
     <rect width="400" height="520" rx="12" fill="#0F172A" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
-    
     <path d="M0,12 Q0,0 12,0 L388,0 Q400,0 400,12 L400,34 L0,34 Z" fill="rgba(255,255,255,0.03)"/>
-    <text class="mono" x="200" y="22" fill="#64748B" font-size="11" text-anchor="middle">VISUAL_ART.asc</text>
+    <text class="terminal-text" x="200" y="22" fill="#64748B" font-size="11" text-anchor="middle">VISUAL_ART.asc</text>
 
     <g transform="translate(25, 55)">
       <animateTransform attributeName="transform" type="translate" values="25,55; 25,63; 25,55" dur="6s" repeatCount="indefinite" />
       
       <g clip-path="url(#clip-ascii-reveal)">
-        <text xml:space="preserve" class="mono" fill="url(#accentGrad)" font-size="9" font-weight="bold" filter="url(#neonGlow)">
-          <tspan x="-20" dy="1.1em">XXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNWWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNX0xolloooddkOKXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXXXXXXNNNNNNNNNNNXXKo'.  ......':coxOXNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXXXXXNXXXNNNNNXKOkko.            .'';lOXNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">XXXXXXXXXXXXXXXXNXXNNNN0dc,,:,               ...:dKNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">KXXXXXXXXXXXXXXXNNXNNNKd,..........';;;,''..    .'l0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">KKXXXXXXXXXXXXXXNXXNNNO:... .';cccclooolllc;'.  ..'oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">KKXXXXXXXXXXXXXXNXXXXN0c.. .,:cloooodddddolll:.....c0NNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">KKKXXXXXXXXXXXXXXXNXXNXx,..;coddxxxxxkkkkxdool:'...oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">KKKKXXXXXXXXXXXXXXXXNNNXk::c:;,,,:clc::;;;:clooc,.;0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKXXXXXXXXXXXXXXXXXXNXko:'.....,:,....''';cdo;;kNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKKKXXXXXXXXXXXXXXXXNOllc'... .:d:.......;coocckKNNNNNNNNNNNNNNNNNNNNXXX</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKKKKXXXXXXXXXXXXXXXXkcll:,''';dkl;;,',;:loxxl:ckNNNXNNNNNNNNNNNNNXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKKKKKXXXXXXXXXXXXXXXKxllc::;cok0Oxollooooddxl:dKNNNNXNXXNNXNNNNNXXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKKKKKKKXXXXXXXXXXXXXX0lccc::::ccclldxxdollodoxKNNNXNNXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKKKKKKKKKXXXXXXXXXXXXXklcccc:;;;:coxkxxollloxKNNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKKKKKKKKKKKKXXXXXXXXXXXklc:,''',,,,;:looc:cdkKXNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">KKKKKKKKKKKKKKKKKKXXXXXXXXXKOo;','',,,,,;;::;;c:;xNXXXXXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">00KKKKKKKKKKKKKKKKKKXXXKXXXXX0o;,,,;;;;;;,'';:c,'lO0KXXXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">0000KKKKKKKKKKKKKKKKKKKKXKKXXX0c..........';clo;.;llkXXXKKXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="-20" dy="1.1em">0000000KKKKKKKKKKKKKKKKKXKKKKXKk:'.......,clodd:'',lO0OdldOKXXXXKKKXXXKXXXX</tspan>
-          <tspan x="-20" dy="1.1em">00000000KKKKKKKKKKKKKKKKKKKKK00kl:;;;;;;:clloddl,:ddlc;:clodxxdlccclx0XXXXX</tspan>
-          <tspan x="-20" dy="1.1em">0000000000KKKKKKKKKKKKKKKKKOc,,''.'',,,,;,'';ol;',,'',;:;,,'...     .'lOXXX</tspan>
-          <tspan x="-20" dy="1.1em">00000000000KKKKKKKKKKKKKKK0o............... 'c' .',,,;;'...   .,:c:;;,.'dKX</tspan>
-          <tspan x="-20" dy="1.1em">0000000000000KKKKKKKKKKK0kl,................,,..,,,,;,.      '::;;;:ll:',xK</tspan>
-          <tspan x="-20" dy="1.1em">0000000000000000KKKKKK0kl'...................  ';,;;,.      .,,,,,,;:llc,:k</tspan>
-          <tspan x="-20" dy="1.1em">0000000000000000000KKKk;. .,;'.............   .,;;;:.       .''',,'',;cll,,</tspan>
-          <tspan x="-20" dy="1.1em">O000000000000000000KKK0x:.;oxxoc;'.........   ',;;:,.        ...,,'''';:lo:</tspan>
-          <tspan x="-20" dy="1.1em">OOO0000000000000000KKKKKd;...':oxxoc;'..... ..,,,,'.         ...'',,''',:ld</tspan>
-          <tspan x="-20" dy="1.1em">OOOOO000000000000000K0Kx:....  .':lxkOxl'. ..,,,,.           .....',;,.'',c</tspan>
-          <tspan x="-20" dy="1.1em">OOOOO0000000000000000K0l'.,;. .   .:odxkxo:;,,,,.             .....';;,'..'</tspan>
-          <tspan x="-20" dy="1.1em">OOOO00O00000000000000K0l..::',,,.  .;llodk0kl,,.               .....,::;'..</tspan>
-          <tspan x="-20" dy="1.4em" fill="#22D3EE">    &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
+        <text xml:space="preserve" class="ascii-text" fill="url(#accentGrad)" font-size="9" font-weight="bold" filter="url(#neonGlow)">
+          <tspan x="3" dy="1.1em">XXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNWWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNX0xolloooddkOKXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXXNNNNNNNNNNNXXKo'.  ......':coxOXNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXNXXXNNNNNXKOkko.            .'';lOXNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXXNXXNNNN0dc,,:,               ...:dKNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">KXXXXXXXXXXXXXXXNNXNNNKd,..........';;;,''..    .'l0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">KKXXXXXXXXXXXXXXNXXNNNO:... .';cccclooolllc;'.  ..'oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">KKXXXXXXXXXXXXXXNXXXXN0c.. .,:cloooodddddolll:.....c0NNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">KKKXXXXXXXXXXXXXXXNXXNXx,..;coddxxxxxkkkkxdool:'...oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">KKKKXXXXXXXXXXXXXXXXNNNXk::c:;,,,:clc::;;;:clooc,.;0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">KKKKKXXXXXXXXXXXXXXXXXXNXko:'.....,:,....''';cdo;;kNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="3" dy="1.1em">KKKKKKKXXXXXXXXXXXXXXXXNOllc'... .:d:.......;coocckKNNNNNNNNNNNNNNNNNNNNXXX</tspan>
+          <tspan x="3" dy="1.1em">KKKKKKKKXXXXXXXXXXXXXXXXkcll:,''';dkl;;,',;:loxxl:ckNNNXNNNNNNNNNNNNNXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">KKKKKKKKKXXXXXXXXXXXXXXXKxllc::;cok0Oxollooooddxl:dKNNNNXNXXNNXNNNNNXXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">KKKKKKKKKKKXXXXXXXXXXXXXX0lccc::::ccclldxxdollodoxKNNNXNNXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">KKKKKKKKKKKKKXXXXXXXXXXXXXklcccc:;;;:coxkxxollloxKNNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">KKKKKKKKKKKKKKKKXXXXXXXXXXXklc:,''',,,,;:looc:cdkKXNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">KKKKKKKKKKKKKKKKKKXXXXXXXXXKOo;','',,,,,;;::;;c:;xNXXXXXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">00KKKKKKKKKKKKKKKKKKXXXKXXXXX0o;,,,;;;;;;,'';:c,'lO0KXXXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">0000KKKKKKKKKKKKKKKKKKKKXKKXXX0c..........';clo;.;llkXXXKKXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="3" dy="1.1em">0000000KKKKKKKKKKKKKKKKKXKKKKXKk:'.......,clodd:'',lO0OdldOKXXXXKKKXXXKXXXX</tspan>
+          <tspan x="3" dy="1.1em">00000000KKKKKKKKKKKKKKKKKKKKK00kl:;;;;;;:clloddl,:ddlc;:clodxxdlccclx0XXXXX</tspan>
+          <tspan x="3" dy="1.1em">0000000000KKKKKKKKKKKKKKKKKOc,,''.'',,,,;,'';ol;',,'',;:;,,'...     .'lOXXX</tspan>
+          <tspan x="3" dy="1.1em">00000000000KKKKKKKKKKKKKKK0o............... 'c' .',,,;;'...   .,:c:;;,.'dKX</tspan>
+          <tspan x="3" dy="1.1em">0000000000000KKKKKKKKKKK0kl,................,,..,,,,;,.      '::;;;:ll:',xK</tspan>
+          <tspan x="3" dy="1.1em">0000000000000000KKKKKK0kl'...................  ';,;;,.      .,,,,,,;:llc,:k</tspan>
+          <tspan x="3" dy="1.1em">0000000000000000000KKKk;. .,;'.............   .,;;;:.       .''',,'',;cll,,</tspan>
+          <tspan x="3" dy="1.1em">O000000000000000000KKK0x:.;oxxoc;'.........   ',;;:,.        ...,,'''';:lo:</tspan>
+          <tspan x="3" dy="1.1em">OOO0000000000000000KKKKKd;...':oxxoc;'..... ..,,,,'.         ...'',,''',:ld</tspan>
+          <tspan x="3" dy="1.1em">OOOOO000000000000000K0Kx:....  .':lxkOxl'. ..,,,,.           .....',;,.'',c</tspan>
+          <tspan x="3" dy="1.1em">OOOOO0000000000000000K0l'.,;. .   .:odxkxo:;,,,,.             .....';;,'..'</tspan>
+          <tspan x="3" dy="1.1em">OOOO00O00000000000000K0l..::',,,.  .;llodk0kl,,.               .....,::;'..</tspan>
+          <tspan x="3" dy="1.4em" fill="#22D3EE">    &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
         </text>
       </g>
     </g>
@@ -160,18 +169,18 @@
 
   <g transform="translate(465, 45)">
     <rect width="680" height="520" rx="12" fill="#0F172A" fill-opacity="0.75" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
-    
     <path d="M0,12 Q0,0 12,0 L668,0 Q680,0 680,12 L680,38 L0,38 Z" fill="rgba(255,255,255,0.03)"/>
     <circle cx="22" cy="19" r="5" fill="#FF5F56"/>
     <circle cx="38" cy="19" r="5" fill="#FFBD2E"/>
     <circle cx="54" cy="19" r="5" fill="#27C93F"/>
-    <text class="mono" x="340" y="23" fill="#64748B" font-size="12" text-anchor="middle">bash - profile.sh</text>
+    
+    <text class="terminal-text" x="340" y="23" fill="#64748B" font-size="12" text-anchor="middle">bash - profile.sh</text>
 
-    <g transform="translate(35, 65)" class="mono">
+    <g transform="translate(35, 65)" class="terminal-text">
       
       <g clip-path="url(#clip-line1)">
         <text class="text-main" font-size="28" font-weight="700" y="25">
-          Hi, I'm <tspan fill="url(#accentGrad)">{SEU_NOME}</tspan>
+          Hi, I'm <tspan fill="url(#accentGrad)">João Franco</tspan>
         </text>
       </g>
 
@@ -196,7 +205,7 @@
           <text class="text-main" x="120" y="84">High-performance Web &amp; Distributed Systems</text>
 
           <text class="text-purple" font-weight="600" x="0" y="112">Contact:</text>
-          <text class="text-accent" x="120" y="112">dev@seuemail.com</text>
+          <text class="text-accent" x="120" y="112">joao.franco.biz@gmail.com</text>
         </g>
       </g>
 
@@ -249,7 +258,6 @@
           <path d="M18.244 8.25h2.327l-5.084 5.809 5.98 7.941h-4.683l-3.668-4.795-4.195 4.795H6.59l5.433-6.209L6.25 8.25h4.8l3.313 4.382 3.881-4.382zm-.816 12.35h1.289L10.89 9.58H9.507l7.921 11.02s" fill="#F8FAFC"/>
         </g>
       </g>
-
     </g>
   </g>
 
