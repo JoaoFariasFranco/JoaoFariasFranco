@@ -113,7 +113,7 @@
       <animateTransform attributeName="transform" type="translate" values="25,55; 25,63; 25,55" dur="6s" repeatCount="indefinite" />
       
       <g clip-path="url(#clip-ascii-reveal)">
-        <text class="mono" fill="url(#accentGrad)" font-size="9" font-weight="bold" letter-spacing="0.5" filter="url(#neonGlow)">
+        <text xml:space="preserve" class="mono" fill="url(#accentGrad)" font-size="9" font-weight="bold" letter-spacing="0.5" filter="url(#neonGlow)">
           <tspan x="10" dy="1.1em">XXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
 <tspan x="10" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
 <tspan x="10" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
