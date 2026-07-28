@@ -80,7 +80,7 @@
 
     <g transform="translate(40, 90)">
       <text class="text-primary" font-size="36" font-weight="800">
-        Hi, I'm {SEU_NOME_AQUI} <tspan class="cursor" fill="url(#accentGrad)">_</tspan>
+        Hi, I'm João Franco <tspan class="cursor" fill="url(#accentGrad)">_</tspan>
       </text>
 
       <text class="text-muted" font-size="20" font-weight="500" y="45">
@@ -92,7 +92,7 @@
       <text class="text-muted" font-size="16" font-weight="400" y="115">
         <tspan x="0" dy="1.5em">📍 Location: Cyber Space</tspan>
         <tspan x="0" dy="1.5em">🎓 Focus: Building scalable web applications</tspan>
-        <tspan x="0" dy="1.5em">📧 Contact: ola@seuemail.com</tspan>
+        <tspan x="0" dy="1.5em">📧 Contact: joao.franco.biz@gmail.com</tspan>
       </text>
 
       <text class="text-primary" font-size="20" font-weight="700" y="220">
