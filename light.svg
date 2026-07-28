@@ -1,118 +1,208 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610">
   <defs>
-    <radialGradient id="bgGlowLight" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.03" />
+    <radialGradient id="bgGlowLight" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.03" />
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
     </radialGradient>
-    
+
     <linearGradient id="accentGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#2563EB">
-        <animate attributeName="stop-color" values="#2563EB;#06B6D4;#10B981;#2563EB" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#2563EB;#06B6D4;#10B981;#2563EB" dur="10s" repeatCount="indefinite" />
       </stop>
       <stop offset="50%" stop-color="#06B6D4">
-        <animate attributeName="stop-color" values="#06B6D4;#10B981;#2563EB;#06B6D4" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#06B6D4;#10B981;#2563EB;#06B6D4" dur="10s" repeatCount="indefinite" />
       </stop>
       <stop offset="100%" stop-color="#10B981">
-        <animate attributeName="stop-color" values="#10B981;#2563EB;#06B6D4;#10B981" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#10B981;#2563EB;#06B6D4;#10B981" dur="10s" repeatCount="indefinite" />
       </stop>
     </linearGradient>
 
-    <filter id="glassShadowLight" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.1"/>
+    <linearGradient id="scanlineLaserLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0" />
+      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.06"/>
     </filter>
+
+    <clipPath id="clip-ascii-reveal-light">
+      <rect x="0" y="0" width="420" height="0">
+        <animate attributeName="height" from="0" to="480" dur="2s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="clip-line1-light">
+      <rect x="0" y="0" width="0" height="40">
+        <animate attributeName="width" from="0" to="650" dur="1s" begin="0.8s" fill="freeze" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="clip-line2-light">
+      <rect x="0" y="0" width="0" height="35">
+        <animate attributeName="width" from="0" to="650" dur="1.2s" begin="1.9s" fill="freeze" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="clip-details-light">
+      <rect x="0" y="0" width="0" height="180">
+        <animate attributeName="width" from="0" to="650" dur="1.8s" begin="3.2s" fill="freeze" />
+      </rect>
+    </clipPath>
   </defs>
 
   <style>
-    .text-primary-light { font-family: system-ui, -apple-system, sans-serif; fill: #0F172A; }
-    .text-muted-light { font-family: system-ui, -apple-system, sans-serif; fill: #475569; }
-    .text-code-light { font-family: 'Courier New', monospace; font-weight: bold; }
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace; }
+    .text-main-light { fill: #0F172A; }
+    .text-muted-light { fill: #475569; }
+    .text-accent-light { fill: #2563EB; }
+    .text-cyan-light { fill: #0891B2; }
     
-    .cursor-light { animation: blink 1s step-end infinite; }
+    .cursor-light { animation: blink 0.8s infinite; fill: #2563EB; }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-    .pill-light { transition: all 0.3s ease; cursor: pointer; }
-    .pill-light:hover rect {
-      stroke: #06B6D4; stroke-width: 2;
-      filter: drop-shadow(0 0 6px rgba(6, 182, 212, 0.3));
+    .fade-in-delayed-light {
+      opacity: 0;
+      animation: fadeIn 0.8s forwards 5.2s;
     }
-    .pill-light:hover text { fill: #06B6D4; }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .pill-light { transition: transform 0.2s ease, filter 0.2s ease; cursor: pointer; }
+    .pill-light:hover { transform: translateY(-2px) scale(1.03); filter: drop-shadow(0 4px 10px rgba(37, 99, 235, 0.15)); }
   </style>
 
-  <rect width="1180" height="610" fill="#FFFFFF" rx="16"/>
-  <rect width="1180" height="610" fill="url(#bgGlowLight)" rx="16"/>
+  <rect width="1180" height="610" rx="16" fill="#FFFFFF"/>
+  <rect width="1180" height="610" rx="16" fill="url(#bgGlowLight)"/>
+  <rect x="1.5" y="1.5" width="1177" height="607" rx="15" fill="none" stroke="rgba(15,23,42,0.08)" stroke-width="1.5"/>
 
-  <g transform="translate(60, 200)">
-    <animateTransform attributeName="transform" type="translate" values="60,180; 60,195; 60,180" dur="6s" repeatCount="indefinite"/>
-    <text class="text-code-light" fill="url(#accentGradLight)" font-size="16" letter-spacing="2">
-      <tspan x="0" dy="1.2em">      .--------.      </tspan>
-      <tspan x="0" dy="1.2em">     / .------. \     </tspan>
-      <tspan x="0" dy="1.2em">    / /        \ \    </tspan>
-      <tspan x="0" dy="1.2em">    | |  {/}   | |    </tspan>
-      <tspan x="0" dy="1.2em">    | |        | |    </tspan>
-      <tspan x="0" dy="1.2em">    \ \        / /    </tspan>
-      <tspan x="0" dy="1.2em">     \ '------' /     </tspan>
-      <tspan x="0" dy="1.2em">      '--------'      </tspan>
-      <tspan x="0" dy="1.2em">       _||__||_       </tspan>
-    </text>
-  </g>
+  <g transform="translate(35, 45)" filter="url(#softShadow)">
+    <rect width="400" height="520" rx="12" fill="#F8FAFC" stroke="rgba(15,23,42,0.08)" stroke-width="1.2"/>
+    <path d="M0,12 Q0,0 12,0 L388,0 Q400,0 400,12 L400,34 L0,34 Z" fill="rgba(15,23,42,0.03)"/>
+    <text class="mono" x="200" y="22" fill="#94A3B8" font-size="11" text-anchor="middle">VISUAL_ART.asc</text>
 
-  <g transform="translate(420, 50)" filter="url(#glassShadowLight)">
-    <rect width="700" height="510" rx="16" fill="#F8FAFC" stroke="rgba(15,23,42,0.08)" stroke-width="1.5"/>
-    
-    <circle cx="30" cy="30" r="6" fill="#FF5F56"/>
-    <circle cx="50" cy="30" r="6" fill="#FFBD2E"/>
-    <circle cx="70" cy="30" r="6" fill="#27C93F"/>
-
-    <g transform="translate(40, 90)">
-      <text class="text-primary-light" font-size="36" font-weight="800">
-        Hi, I'm João Franco <tspan class="cursor-light" fill="url(#accentGradLight)">_</tspan>
-      </text>
-      <text class="text-muted-light" font-size="20" font-weight="500" y="45">
-        > Full Stack Developer &amp; Open Source Contributor
-      </text>
-
-      <line x1="0" y1="80" x2="620" y2="80" stroke="rgba(15,23,42,0.1)" stroke-width="1"/>
-
-      <text class="text-muted-light" font-size="16" font-weight="400" y="115">
-        <tspan x="0" dy="1.5em">📍 Location: Cyber Space</tspan>
-        <tspan x="0" dy="1.5em">🎓 Focus: Building scalable web applications</tspan>
-        <tspan x="0" dy="1.5em">📧 Contact: joao.franco.biz@gmail.com</tspan>
-      </text>
-
-      <text class="text-primary-light" font-size="20" font-weight="700" y="220">
-        Tecnologias &amp; Ferramentas
-      </text>
-
-      <g transform="translate(0, 240)">
-        <g class="pill-light" transform="translate(0, 0)">
-          <rect width="100" height="36" rx="18" fill="#FFFFFF" stroke="rgba(15,23,42,0.1)"/>
-          <text class="text-primary-light" font-size="14" x="50" y="23" text-anchor="middle">React</text>
-        </g>
-        <g class="pill-light" transform="translate(115, 0)">
-          <rect width="110" height="36" rx="18" fill="#FFFFFF" stroke="rgba(15,23,42,0.1)"/>
-          <text class="text-primary-light" font-size="14" x="55" y="23" text-anchor="middle">Node.js</text>
-        </g>
-        <g class="pill-light" transform="translate(240, 0)">
-          <rect width="120" height="36" rx="18" fill="#FFFFFF" stroke="rgba(15,23,42,0.1)"/>
-          <text class="text-primary-light" font-size="14" x="60" y="23" text-anchor="middle">TypeScript</text>
-        </g>
-        <g class="pill-light" transform="translate(375, 0)">
-          <rect width="90" height="36" rx="18" fill="#FFFFFF" stroke="rgba(15,23,42,0.1)"/>
-          <text class="text-primary-light" font-size="14" x="45" y="23" text-anchor="middle">Docker</text>
-        </g>
-        <g class="pill-light" transform="translate(0, 50)">
-          <rect width="90" height="36" rx="18" fill="#FFFFFF" stroke="rgba(15,23,42,0.1)"/>
-          <text class="text-primary-light" font-size="14" x="45" y="23" text-anchor="middle">Python</text>
-        </g>
-        <g class="pill-light" transform="translate(105, 50)">
-          <rect width="100" height="36" rx="18" fill="#FFFFFF" stroke="rgba(15,23,42,0.1)"/>
-          <text class="text-primary-light" font-size="14" x="50" y="23" text-anchor="middle">Next.js</text>
-        </g>
-        <g class="pill-light" transform="translate(220, 50)">
-          <rect width="110" height="36" rx="18" fill="#FFFFFF" stroke="rgba(15,23,42,0.1)"/>
-          <text class="text-primary-light" font-size="14" x="55" y="23" text-anchor="middle">Postgres</text>
-        </g>
+    <g transform="translate(25, 55)">
+      <animateTransform attributeName="transform" type="translate" values="25,55; 25,63; 25,55" dur="6s" repeatCount="indefinite" />
+      
+      <g clip-path="url(#clip-ascii-reveal-light)">
+        <text class="mono" fill="url(#accentGradLight)" font-size="10.5" font-weight="bold" letter-spacing="1.5">
+          <tspan x="0" dy="1.2em">          .----------------.          </tspan>
+          <tspan x="0" dy="1.2em">        ./  ________________  \.      </tspan>
+          <tspan x="0" dy="1.2em">       /  /                \  \     </tspan>
+          <tspan x="0" dy="1.2em">      /  /   ░░░░░░░░░░░░   \  \    </tspan>
+          <tspan x="0" dy="1.2em">     |  |   ░░████    ████░░   |  |   </tspan>
+          <tspan x="0" dy="1.2em">     |  |   ░░████    ████░░   |  |   </tspan>
+          <tspan x="0" dy="1.2em">     |  |   ░░░░░░  ░░░░░░░░   |  |   </tspan>
+          <tspan x="0" dy="1.2em">     |  |   ░░░░  ▀▀▀▀  ░░░░   |  |   </tspan>
+          <tspan x="0" dy="1.2em">     |  |   ░░░░░░░░░░░░░░░░   |  |   </tspan>
+          <tspan x="0" dy="1.2em">      \  \   ░░░░░░░░░░░░   /  /    </tspan>
+          <tspan x="0" dy="1.2em">       \  \________________/  /     </tspan>
+          <tspan x="0" dy="1.2em">        '\________________/'      </tspan>
+          <tspan x="0" dy="1.2em">           /    ||    \           </tspan>
+          <tspan x="0" dy="1.2em">         ./     ||     \.         </tspan>
+          <tspan x="0" dy="1.2em">      ./________||________\.      </tspan>
+          <tspan x="0" dy="1.2em">     /____________________\     </tspan>
+          <tspan x="0" dy="1.2em">     &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
+        </text>
       </g>
     </g>
   </g>
+
+  <g transform="translate(465, 45)" filter="url(#softShadow)">
+    <rect width="680" height="520" rx="12" fill="#F8FAFC" stroke="rgba(15,23,42,0.08)" stroke-width="1.2"/>
+    <path d="M0,12 Q0,0 12,0 L668,0 Q680,0 680,12 L680,38 L0,38 Z" fill="rgba(15,23,42,0.03)"/>
+    <circle cx="22" cy="19" r="5" fill="#FF5F56"/>
+    <circle cx="38" cy="19" r="5" fill="#FFBD2E"/>
+    <circle cx="54" cy="19" r="5" fill="#27C93F"/>
+    <text class="mono" x="340" y="23" fill="#94A3B8" font-size="12" text-anchor="middle">bash - profile.sh</text>
+
+    <g transform="translate(35, 65)" class="mono">
+      <g clip-path="url(#clip-line1-light)">
+        <text class="text-main-light" font-size="28" font-weight="700" y="25">
+          Hi, I'm <tspan fill="url(#accentGradLight)">{SEU_NOME}</tspan>
+        </text>
+      </g>
+
+      <g clip-path="url(#clip-line2-light)">
+        <text class="text-accent-light" font-size="17" font-weight="600" y="62">
+          &gt; Full Stack Developer &amp; UI Engineer
+        </text>
+      </g>
+
+      <g clip-path="url(#clip-details-light)">
+        <g transform="translate(0, 105)" font-size="14">
+          <text class="text-cyan-light" font-weight="600" x="0" y="0">Subject:</text>
+          <text class="text-main-light" x="120" y="0">Full Stack Engineer</text>
+
+          <text class="text-cyan-light" font-weight="600" x="0" y="28">Location:</text>
+          <text class="text-main-light" x="120" y="28">Brazil / Remote</text>
+
+          <text class="text-cyan-light" font-weight="600" x="0" y="56">Education:</text>
+          <text class="text-main-light" x="120" y="56">B.S. in Computer Science</text>
+
+          <text class="text-cyan-light" font-weight="600" x="0" y="84">Focus:</text>
+          <text class="text-main-light" x="120" y="84">High-performance Web &amp; Distributed Systems</text>
+
+          <text class="text-cyan-light" font-weight="600" x="0" y="112">Contact:</text>
+          <text class="text-accent-light" x="120" y="112">dev@seuemail.com</text>
+        </g>
+      </g>
+
+      <rect class="cursor-light" x="300" y="215" width="9" height="17" rx="1" />
+
+      <line x1="0" y1="250" x2="610" y2="250" stroke="rgba(15,23,42,0.08)" stroke-width="1" class="fade-in-delayed-light"/>
+
+      <g transform="translate(0, 275)" class="fade-in-delayed-light">
+        <text font-size="15" font-weight="700" fill="#0F172A" y="0">Core Tech Stack</text>
+        
+        <g transform="translate(0, 16)">
+          <g class="pill-light" transform="translate(0,0)">
+            <rect width="80" height="30" rx="15" fill="#FFFFFF" stroke="#0891B2" stroke-width="1"/>
+            <text font-size="12" fill="#0891B2" x="40" y="19" text-anchor="middle" font-weight="600">React</text>
+          </g>
+          <g class="pill-light" transform="translate(90,0)">
+            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="#2563EB" stroke-width="1"/>
+            <text font-size="12" fill="#2563EB" x="42.5" y="19" text-anchor="middle" font-weight="600">Next.js</text>
+          </g>
+          <g class="pill-light" transform="translate(185,0)">
+            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="#059669" stroke-width="1"/>
+            <text font-size="12" fill="#059669" x="42.5" y="19" text-anchor="middle" font-weight="600">Node.js</text>
+          </g>
+          <g class="pill-light" transform="translate(280,0)">
+            <rect width="105" height="30" rx="15" fill="#FFFFFF" stroke="#2563EB" stroke-width="1"/>
+            <text font-size="12" fill="#2563EB" x="52.5" y="19" text-anchor="middle" font-weight="600">TypeScript</text>
+          </g>
+          <g class="pill-light" transform="translate(395,0)">
+            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="rgba(15,23,42,0.2)" stroke-width="1"/>
+            <text font-size="12" fill="#475569" x="42.5" y="19" text-anchor="middle" font-weight="600">Docker</text>
+          </g>
+          <g class="pill-light" transform="translate(490,0)">
+            <rect width="80" height="30" rx="15" fill="#FFFFFF" stroke="#2563EB" stroke-width="1"/>
+            <text font-size="12" fill="#2563EB" x="40" y="19" text-anchor="middle" font-weight="600">Python</text>
+          </g>
+        </g>
+      </g>
+
+      <g transform="translate(0, 385)" class="fade-in-delayed-light">
+        <g class="pill-light" transform="translate(0,0)">
+          <circle cx="16" cy="16" r="16" fill="#FFFFFF" stroke="rgba(15,23,42,0.15)" stroke-width="1"/>
+          <path d="M16 8C11.58 8 8 11.58 8 16c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0024 16c0-4.42-3.58-8-8-8z" fill="#0F172A"/>
+        </g>
+        <g class="pill-light" transform="translate(45,0)">
+          <circle cx="16" cy="16" r="16" fill="#FFFFFF" stroke="#2563EB" stroke-width="1"/>
+          <path d="M12 11h2.5v1.5h.05c.35-.66 1.2-1.35 2.45-1.35 2.62 0 3.1 1.73 3.1 3.98V20H17.5v-4.37c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3V20H12V11zm-3-2a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-1.25 2h2.5V20h-2.5V11z" fill="#2563EB"/>
+        </g>
+        <g class="pill-light" transform="translate(90,0)">
+          <circle cx="16" cy="16" r="16" fill="#FFFFFF" stroke="rgba(15,23,42,0.15)" stroke-width="1"/>
+          <path d="M18.244 8.25h2.327l-5.084 5.809 5.98 7.941h-4.683l-3.668-4.795-4.195 4.795H6.59l5.433-6.209L6.25 8.25h4.8l3.313 4.382 3.881-4.382zm-.816 12.35h1.289L10.89 9.58H9.507l7.921 11.02s" fill="#0F172A"/>
+        </g>
+      </g>
+
+    </g>
+  </g>
+
+  <rect x="0" y="0" width="1180" height="3" fill="url(#scanlineLaserLight)">
+    <animate attributeName="y" values="-10;610;-10" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+  </rect>
 </svg>
