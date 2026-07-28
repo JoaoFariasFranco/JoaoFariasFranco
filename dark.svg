@@ -113,24 +113,28 @@
       <animateTransform attributeName="transform" type="translate" values="25,55; 25,63; 25,55" dur="6s" repeatCount="indefinite" />
       
       <g clip-path="url(#clip-ascii-reveal)">
-        <text class="mono" fill="url(#accentGrad)" font-size="10.5" font-weight="bold" letter-spacing="1.5" filter="url(#neonGlow)">
-          <tspan x="0" dy="1.2em">          .----------------.          </tspan>
-          <tspan x="0" dy="1.2em">        ./  ________________  \.      </tspan>
-          <tspan x="0" dy="1.2em">       /  /                \  \     </tspan>
-          <tspan x="0" dy="1.2em">      /  /   ░░░░░░░░░░░░   \  \    </tspan>
-          <tspan x="0" dy="1.2em">     |  |   ░░████    ████░░   |  |   </tspan>
-          <tspan x="0" dy="1.2em">     |  |   ░░████    ████░░   |  |   </tspan>
-          <tspan x="0" dy="1.2em">     |  |   ░░░░░░  ░░░░░░░░   |  |   </tspan>
-          <tspan x="0" dy="1.2em">     |  |   ░░░░  ▀▀▀▀  ░░░░   |  |   </tspan>
-          <tspan x="0" dy="1.2em">     |  |   ░░░░░░░░░░░░░░░░   |  |   </tspan>
-          <tspan x="0" dy="1.2em">      \  \   ░░░░░░░░░░░░   /  /    </tspan>
-          <tspan x="0" dy="1.2em">       \  \________________/  /     </tspan>
-          <tspan x="0" dy="1.2em">        '\________________/'      </tspan>
-          <tspan x="0" dy="1.2em">           /    ||    \           </tspan>
-          <tspan x="0" dy="1.2em">         ./     ||     \.         </tspan>
-          <tspan x="0" dy="1.2em">      ./________||________\.      </tspan>
-          <tspan x="0" dy="1.2em">     /____________________\     </tspan>
-          <tspan x="0" dy="1.2em">     &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
+        <text class="mono" fill="url(#accentGrad)" font-size="9" font-weight="bold" letter-spacing="0.5" filter="url(#neonGlow)">
+          <tspan x="10" dy="1.1em">XXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">XXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">XXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">XXXXXXXNNNNNNNNN0ddddxOKXNNNNNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">XXXXXXXXNNNNX0Oo.    ..,cxKNNNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">XXXXXXXXNXXXd,'......... .cONNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">KXXXXXXXXXN0: .,:cloool:'..cKNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">KKXXXXXXXXNXd,;:cloolllll;.lXNNNNNNNNNNN</tspan>
+          <tspan x="10" dy="1.1em">KKKXXXXXXXXXKx:...;,...,llcONNXNNNNNNNNX</tspan>
+          <tspan x="10" dy="1.1em">KKKKXXXXXXXN0dc,':dl,,;codlxXNNNXNXXXXXX</tspan>
+          <tspan x="10" dy="1.1em">KKKKKKKKXXXXXklc:clooddoooxKNXNNXXXXXXXX</tspan>
+          <tspan x="10" dy="1.1em">KKKKKKKKXXXXXKxc;,,;:colcoOXNXNXXXXXXXXX</tspan>
+          <tspan x="10" dy="1.1em">0KKKKKKKKKXKXXKx;',,,,,;::lOXNXXXXXXXXXX</tspan>
+          <tspan x="10" dy="1.1em">00KKKKKKKKXKKKXXd'....,co:,oOOk0XXKXXXXX</tspan>
+          <tspan x="10" dy="1.1em">0000KKKKKKKKKKOdc,',,,;:l:,cc:::c:;;:d0X</tspan>
+          <tspan x="10" dy="1.1em">00000KK0KKKKKO:.........,.',,.. ..,;;,cO</tspan>
+          <tspan x="10" dy="1.1em">00000000K0K0o'............;;.   .,,,;c:l</tspan>
+          <tspan x="10" dy="1.1em">O000000000K0l',::;..... .';'.    .''',cc</tspan>
+          <tspan x="10" dy="1.1em">OO0000000000d'..':lol:..',..     ..','';</tspan>
+          <tspan x="10" dy="1.1em">OOO0000000K0:',...'lxxdc;'.       ..';,.</tspan>
+          <tspan x="10" dy="1.4em" fill="#22D3EE">    &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
         </text>
       </g>
     </g>
