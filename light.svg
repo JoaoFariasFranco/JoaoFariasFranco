@@ -233,7 +233,7 @@
             <text font-size="12" fill="#2563EB" x="52.5" y="19" text-anchor="middle" font-weight="600">Microsoft</text>
           </g>
           <g class="pill" transform="translate(395,0)">
-            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
             <text font-size="12" fill="#475569" x="42.5" y="19" text-anchor="middle" font-weight="600">Docker</text>
           </g>
           <g class="pill" transform="translate(490,0)">
