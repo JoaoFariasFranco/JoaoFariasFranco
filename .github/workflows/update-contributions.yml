@@ -12,11 +12,11 @@ jobs:
       contents: write              # necessário para fazer push
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -25,7 +25,8 @@ jobs:
 
       - name: Run fetch_contributions
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}           # token com read:user
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}        # token com read:user; usa o PAT se existir, senão o token do workflow
           GH_PROFILE_USER: JoaoFariasFranco
         run: python scripts/fetch_contributions.py
 
