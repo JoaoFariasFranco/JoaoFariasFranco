@@ -233,8 +233,8 @@
             <text font-size="12" fill="#0969da" x="52.5" y="19" text-anchor="middle" font-weight="600">Microsoft</text>
           </g>
           <g class="pill" transform="translate(395,0)">
-            <rect width="85" height="30" rx="15" fill="#ffffff" stroke="#656c76" stroke-width="1"/>
-            <text font-size="12" fill="#656c76" x="42.5" y="19" text-anchor="middle" font-weight="600">Docker</text>
+            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <text font-size="12" fill="#475569" x="42.5" y="19" text-anchor="middle" font-weight="600">Docker</text>
           </g>
           <g class="pill" transform="translate(490,0)">
             <rect width="80" height="30" rx="15" fill="#ffffff" stroke="#8250df" stroke-width="1"/>
