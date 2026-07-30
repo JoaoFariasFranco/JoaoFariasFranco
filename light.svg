@@ -1,39 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610">
   <defs>
     <radialGradient id="bgGlow" cx="50%" cy="50%" r="100%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.08" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="0%" stop-color="#0969da" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
     </radialGradient>
 
     <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2563EB">
-        <animate attributeName="stop-color" values="#2563EB;#06B6D4;#10B981;#2563EB" dur="10s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#8250df">
+        <animate attributeName="stop-color" values="#8250df;#0969da;#1a7f37;#8250df" dur="10s" repeatCount="indefinite" />
       </stop>
-      <stop offset="50%" stop-color="#06B6D4">
-        <animate attributeName="stop-color" values="#06B6D4;#10B981;#2563EB;#06B6D4" dur="10s" repeatCount="indefinite" />
+      <stop offset="50%" stop-color="#0969da">
+        <animate attributeName="stop-color" values="#0969da;#1a7f37;#8250df;#0969da" dur="10s" repeatCount="indefinite" />
       </stop>
-      <stop offset="100%" stop-color="#10B981">
-        <animate attributeName="stop-color" values="#10B981;#2563EB;#06B6D4;#10B981" dur="10s" repeatCount="indefinite" />
+      <stop offset="100%" stop-color="#1a7f37">
+        <animate attributeName="stop-color" values="#1a7f37;#8250df;#0969da;#1a7f37" dur="10s" repeatCount="indefinite" />
       </stop>
     </linearGradient>
 
     <linearGradient id="scanlineLaser" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0" />
-      <stop offset="30%" stop-color="#2563EB" stop-opacity="0.9" />
-      <stop offset="70%" stop-color="#06B6D4" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
+      <stop offset="0%" stop-color="#0969da" stop-opacity="0" />
+      <stop offset="30%" stop-color="#0969da" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#8250df" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#8250df" stop-opacity="0" />
     </linearGradient>
 
     <filter id="noiseFilter">
       <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
       <feColorMatrix type="saturate" values="0" />
       <feComponentTransfer>
-        <feFuncA type="linear" slope="0.03" />
+        <feFuncA type="linear" slope="0.015" />
       </feComponentTransfer>
     </filter>
 
     <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
@@ -66,12 +66,12 @@
   </defs>
 
   <style>
-    .text-main { fill: #0F172A; }
-    .text-muted { fill: #475569; }
-    .text-accent { fill: #2563EB; }
-    .text-purple { fill: #0891B2; }
+    .text-main { fill: #1f2328; }
+    .text-muted { fill: #656c76; }
+    .text-accent { fill: #0969da; }
+    .text-purple { fill: #8250df; }
     
-    .cursor { animation: blink 0.8s infinite; fill: #22D3EE; }
+    .cursor { animation: blink 0.8s infinite; fill: #0969da; }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
     .fade-in-delayed {
@@ -81,7 +81,7 @@
     @keyframes fadeIn { to { opacity: 1; } }
 
     .pill { transition: transform 0.2s ease, filter 0.2s ease; cursor: pointer; }
-    .pill:hover { transform: translateY(-2px) scale(1.03); filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5)); }
+    .pill:hover { transform: translateY(-2px) scale(1.03); filter: drop-shadow(0 0 8px rgba(9, 105, 218, 0.4)); }
 
     /* Estilo para a arte ASCII da esquerda */
     .ascii-text {
@@ -100,12 +100,12 @@
     } 
   </style>
 
-  <rect width="1180" height="610" rx="16" fill="#FFFFFF"/>
+  <rect width="1180" height="610" rx="16" fill="#ffffff"/>
   <rect width="1180" height="610" rx="16" fill="url(#bgGlow)"/>
   <rect width="1180" height="610" rx="16" filter="url(#noiseFilter)" />
-  <rect x="1.5" y="1.5" width="1177" height="607" rx="15" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.4"/>
+  <rect x="1.5" y="1.5" width="1177" height="607" rx="15" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.35"/>
 
-  <g fill="#22D3EE" opacity="0.35">
+  <g fill="#0969da" opacity="0.3">
     <circle cx="120" cy="480" r="1.5"><animate attributeName="cy" values="480;120;480" dur="14s" repeatCount="indefinite"/></circle>
     <circle cx="380" cy="180" r="2"><animate attributeName="cy" values="180;520;180" dur="18s" repeatCount="indefinite"/></circle>
     <circle cx="850" cy="420" r="1.5"><animate attributeName="cy" values="420;80;420" dur="12s" repeatCount="indefinite"/></circle>
@@ -113,9 +113,9 @@
   </g>
 
   <g transform="translate(35, 45)">
-    <rect width="400" height="520" rx="12" fill="#F8FAFC" fill-opacity="0.6" stroke="rgba(15,23,42,0.08)" stroke-width="1.2"/>
-    <path d="M0,12 Q0,0 12,0 L388,0 Q400,0 400,12 L400,34 L0,34 Z" fill="rgba(255,255,255,0.03)"/>
-    <text class="terminal-text" x="200" y="22" fill="#94A3B8" font-size="11" text-anchor="middle">VISUAL_ART.asc</text>
+    <rect width="400" height="520" rx="12" fill="#f6f8fa" fill-opacity="0.6" stroke="rgba(31,35,40,0.12)" stroke-width="1.2"/>
+    <path d="M0,12 Q0,0 12,0 L388,0 Q400,0 400,12 L400,34 L0,34 Z" fill="rgba(31,35,40,0.04)"/>
+    <text class="terminal-text" x="200" y="22" fill="#656c76" font-size="11" text-anchor="middle">VISUAL_ART.asc</text>
 
     <g transform="translate(25, 55)">
       <animateTransform attributeName="transform" type="translate" values="25,55; 25,63; 25,55" dur="6s" repeatCount="indefinite" />
@@ -160,20 +160,20 @@
           <tspan x="3" dy="1.1em">OOOOO000000000000000K0Kx:....  .':lxkOxl'. ..,,,,.           .....',;,.'',c</tspan>
           <tspan x="3" dy="1.1em">OOOOO0000000000000000K0l'.,;. .   .:odxkxo:;,,,,.             .....';;,'..'</tspan>
           <tspan x="3" dy="1.1em">OOOO00O00000000000000K0l..::',,,.  .;llodk0kl,,.               .....,::;'..</tspan>
-          <tspan x="3" dy="1.4em" fill="#22D3EE">    &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
+          <tspan x="3" dy="1.4em" fill="#0969da">    &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
         </text>
       </g>
     </g>
   </g>
 
   <g transform="translate(465, 45)">
-    <rect width="680" height="520" rx="12" fill="#F8FAFC" fill-opacity="0.75" stroke="rgba(15,23,42,0.08)" stroke-width="1.2"/>
-    <path d="M0,12 Q0,0 12,0 L668,0 Q680,0 680,12 L680,38 L0,38 Z" fill="rgba(15,23,42,0.03)"/>
+    <rect width="680" height="520" rx="12" fill="#f6f8fa" fill-opacity="0.75" stroke="rgba(31,35,40,0.12)" stroke-width="1.2"/>
+    <path d="M0,12 Q0,0 12,0 L668,0 Q680,0 680,12 L680,38 L0,38 Z" fill="rgba(31,35,40,0.04)"/>
     <circle cx="22" cy="19" r="5" fill="#FF5F56"/>
     <circle cx="38" cy="19" r="5" fill="#FFBD2E"/>
     <circle cx="54" cy="19" r="5" fill="#27C93F"/>
     
-    <text class="terminal-text" x="340" y="23" fill="#94A3B8" font-size="12" text-anchor="middle">bash - profile.sh</text>
+    <text class="terminal-text" x="340" y="23" fill="#656c76" font-size="12" text-anchor="middle">bash - profile.sh</text>
 
     <g transform="translate(35, 65)" class="terminal-text">
       
@@ -185,7 +185,7 @@
 
       <g clip-path="url(#clip-line2)">
         <text class="text-accent" font-size="17" font-weight="600" y="62">
-          &gt; Full Stack Developer &amp; UI Engineer
+          > Full Stack Developer &#38; UI Engineer
         </text>
       </g>
 
@@ -201,7 +201,7 @@
           <text class="text-main" x="120" y="56">Estacio</text>
 
           <text class="text-purple" font-weight="600" x="0" y="84">Focus:</text>
-          <text class="text-main" x="120" y="84">High-performance &amp; Distributed Systems</text>
+          <text class="text-main" x="120" y="84">High-performance &#38; Distributed Systems</text>
 
           <text class="text-purple" font-weight="600" x="0" y="112">Contact:</text>
           <text class="text-accent" x="120" y="112">joao.franco.biz@gmail.com</text>
@@ -210,35 +210,35 @@
 
       <rect clip-path="url(#clip-details)" class="cursor" x="325" y="200" width="9" height="17" rx="1" />
 
-      <line x1="0" y1="250" x2="610" y2="250" stroke="rgba(15,23,42,0.08)" stroke-width="1" class="fade-in-delayed"/>
+      <line x1="0" y1="250" x2="610" y2="250" stroke="rgba(31,35,40,0.12)" stroke-width="1" class="fade-in-delayed"/>
 
       <g transform="translate(0, 275)" class="fade-in-delayed">
-        <text font-size="15" font-weight="700" fill="#0F172A" y="0">Core Tech Stack</text>
+        <text font-size="15" font-weight="700" fill="#1f2328" y="0">Core Tech Stack</text>
         
         <g transform="translate(0, 16)">
           <g class="pill" transform="translate(0,0)">
-            <rect width="80" height="30" rx="15" fill="#FFFFFF" stroke="#0891B2" stroke-width="1"/>
-            <text font-size="12" fill="#0891B2" x="40" y="19" text-anchor="middle" font-weight="600">SQL</text>
+            <rect width="80" height="30" rx="15" fill="#ffffff" stroke="#0969da" stroke-width="1"/>
+            <text font-size="12" fill="#0969da" x="40" y="19" text-anchor="middle" font-weight="600">SQL</text>
           </g>
           <g class="pill" transform="translate(90,0)">
-            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1"/>
-            <text font-size="12" fill="#2563EB" x="42.5" y="19" text-anchor="middle" font-weight="600">Azure</text>
+            <rect width="85" height="30" rx="15" fill="#ffffff" stroke="#8250df" stroke-width="1"/>
+            <text font-size="12" fill="#8250df" x="42.5" y="19" text-anchor="middle" font-weight="600">Azure</text>
           </g>
           <g class="pill" transform="translate(185,0)">
-            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="#10B981" stroke-width="1"/>
-            <text font-size="12" fill="#059669" x="42.5" y="19" text-anchor="middle" font-weight="600">Node.js</text>
+            <rect width="85" height="30" rx="15" fill="#ffffff" stroke="#1a7f37" stroke-width="1"/>
+            <text font-size="12" fill="#1a7f37" x="42.5" y="19" text-anchor="middle" font-weight="600">Node.js</text>
           </g>
           <g class="pill" transform="translate(280,0)">
-            <rect width="105" height="30" rx="15" fill="#FFFFFF" stroke="#22D3EE" stroke-width="1"/>
-            <text font-size="12" fill="#2563EB" x="52.5" y="19" text-anchor="middle" font-weight="600">Microsoft</text>
+            <rect width="105" height="30" rx="15" fill="#ffffff" stroke="#0969da" stroke-width="1"/>
+            <text font-size="12" fill="#0969da" x="52.5" y="19" text-anchor="middle" font-weight="600">Microsoft</text>
           </g>
           <g class="pill" transform="translate(395,0)">
-            <rect width="85" height="30" rx="15" fill="#FFFFFF" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-            <text font-size="12" fill="#475569" x="42.5" y="19" text-anchor="middle" font-weight="600">Docker</text>
+            <rect width="85" height="30" rx="15" fill="#ffffff" stroke="#656c76" stroke-width="1"/>
+            <text font-size="12" fill="#656c76" x="42.5" y="19" text-anchor="middle" font-weight="600">Docker</text>
           </g>
           <g class="pill" transform="translate(490,0)">
-            <rect width="80" height="30" rx="15" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1"/>
-            <text font-size="12" fill="#2563EB" x="40" y="19" text-anchor="middle" font-weight="600">Python</text>
+            <rect width="80" height="30" rx="15" fill="#ffffff" stroke="#8250df" stroke-width="1"/>
+            <text font-size="12" fill="#8250df" x="40" y="19" text-anchor="middle" font-weight="600">Python</text>
           </g>
         </g>
       </g>
@@ -247,22 +247,22 @@
         
         <a href="https://github.com/JoaoFariasFranco" target="_blank" rel="noopener noreferrer">
           <g class="pill" transform="translate(0,0)">
-            <circle cx="16" cy="16" r="16" fill="#FFFFFF" stroke="rgba(15,23,42,0.15)" stroke-width="1"/>
-            <path d="M16 8C11.58 8 8 11.58 8 16c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0024 16c0-4.42-3.58-8-8-8z" fill="#0F172A"/>
+            <circle cx="16" cy="16" r="16" fill="#ffffff" stroke="rgba(31,35,40,0.2)" stroke-width="1"/>
+            <path d="M16 8C11.58 8 8 11.58 8 16c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0024 16c0-4.42-3.58-8-8-8z" fill="#1f2328"/>
           </g>
         </a>
 
         <a href="https://www.linkedin.com/in/joão-pedro-farias-franco-75bb70210?utm_source=share_via" target="_blank" rel="noopener noreferrer">
           <g class="pill" transform="translate(45,0)">
-            <circle cx="16" cy="16" r="16" fill="#FFFFFF" stroke="#2563EB" stroke-width="1"/>
-            <path d="M12 11h2.5v1.5h.05c.35-.66 1.2-1.35 2.45-1.35 2.62 0 3.1 1.73 3.1 3.98V20H17.5v-4.37c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3V20H12V11zm-3-2a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-1.25 2h2.5V20h-2.5V11z" fill="#2563EB"/>
+            <circle cx="16" cy="16" r="16" fill="#ffffff" stroke="#0969da" stroke-width="1"/>
+            <path d="M12 11h2.5v1.5h.05c.35-.66 1.2-1.35 2.45-1.35 2.62 0 3.1 1.73 3.1 3.98V20H17.5v-4.37c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3V20H12V11zm-3-2a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-1.25 2h2.5V20h-2.5V11z" fill="#0969da"/>
           </g>
         </a>
 
         <a href="mailto:joao.franco.biz@gmail.com" rel="noopener noreferrer">
           <g class="pill" transform="translate(90,0)">
-            <circle cx="16" cy="16" r="16" fill="#FFFFFF" stroke="rgba(15,23,42,0.15)" stroke-width="1"/>
-            <path transform="translate(4, 4)" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-8V6l8 5 8-5v2z" fill="#0F172A"/>
+            <circle cx="16" cy="16" r="16" fill="#ffffff" stroke="rgba(31,35,40,0.2)" stroke-width="1"/>
+            <path transform="translate(4, 4)" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-8V6l8 5 8-5v2z" fill="#1f2328"/>
           </g>
         </a>
 
