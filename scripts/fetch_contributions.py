@@ -57,7 +57,11 @@ def fetch_days():
     if "errors" in data:
         print("❌ Erro GraphQL:", file=sys.stderr)
         for err in data["errors"]:
-            print(f"   - {err['message']}", file=sys.stderr)
+            message = err.get("message", "unknown error")
+            print(f"   - {message}", file=sys.stderr)
+            if "resource is not accessible by integration" in message.lower() or "read:user" in message.lower():
+                print("   → O token provavelmente não tem permissão read:user ou o perfil é privado.", file=sys.stderr)
+                print("   → Configure um segredo GH_PAT com permissão read:user no repositório.", file=sys.stderr)
         sys.exit(1)
 
     calendar = data.get("data", {}).get("user", {}).get("contributionsCollection", {}).get("contributionCalendar", {})

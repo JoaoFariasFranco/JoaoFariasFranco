@@ -23,6 +23,20 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
+      - name: Validate GitHub token
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "$GH_PAT" ]; then
+            echo "Using GH_PAT from repository secrets."
+          elif [ -n "$GITHUB_TOKEN" ]; then
+            echo "GH_PAT not configured; falling back to github.token."
+          else
+            echo "No GitHub token available for the API request." >&2
+            exit 1
+          fi
+
       - name: Run fetch_contributions
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
@@ -31,7 +45,9 @@ jobs:
         run: python scripts/fetch_contributions.py
 
       - name: Render contribution heatmap
-        run: python scripts/render_heatmap_svg.py
+        run: |
+          test -f data/contributions.json || { echo "Expected data/contributions.json was not generated." >&2; exit 1; }
+          python scripts/render_heatmap_svg.py
 
       - name: Commit and push if changes
         run: |
