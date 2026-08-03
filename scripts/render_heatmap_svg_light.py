@@ -31,9 +31,7 @@ GREEN = "#1a7f37"
 GOLD = "#bf8700"
 PURPLE = "#8250df"
 
-COL_T = 0.018
-ROW_T = 0.045
-CELL_DUR = 0.42
+from heatmap_config import COL_T, ROW_T, CELL_DUR
 
 
 def level_for(count):

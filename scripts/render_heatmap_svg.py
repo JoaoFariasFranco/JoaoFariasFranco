@@ -38,10 +38,7 @@ GREEN = "#39d353"       # verde
 GOLD = "#f2cc60"
 PURPLE = "#A78BFA"      # roxo
 
-# reveal timing (one-shot)
-COL_T = 0.018   # per-column delay contribution (left -> right sweep)
-ROW_T = 0.045   # per-row delay contribution (top -> bottom cascade)
-CELL_DUR = 0.42
+from heatmap_config import COL_T, ROW_T, CELL_DUR
 
 
 def level_for(count):
