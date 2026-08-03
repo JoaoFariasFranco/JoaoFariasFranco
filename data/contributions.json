@@ -1,17 +1,17 @@
 {
   "username": "JoaoFariasFranco",
-  "generated_at": "2026-07-30T14:07:35Z",
+  "generated_at": "2026-08-03T04:36:31Z",
   "range": {
-    "start": "2025-07-27",
-    "end": "2026-07-30"
+    "start": "2025-08-03",
+    "end": "2026-08-03"
   },
-  "total_contributions": 233,
+  "total_contributions": 241,
   "active_days": 29,
-  "avg_per_active_day": 8.0,
+  "avg_per_active_day": 8.3,
   "current_streak": {
-    "length": 1,
-    "start": "2026-07-30",
-    "end": "2026-07-30"
+    "length": 0,
+    "start": null,
+    "end": null
   },
   "longest_streak": {
     "length": 5,
@@ -23,10 +23,6 @@
     "count": 60
   },
   "monthly": [
-    {
-      "month": "2025-07",
-      "total": 0
-    },
     {
       "month": "2025-08",
       "total": 0
@@ -73,38 +69,14 @@
     },
     {
       "month": "2026-07",
-      "total": 79
+      "total": 87
+    },
+    {
+      "month": "2026-08",
+      "total": 0
     }
   ],
   "days": [
-    {
-      "date": "2025-07-27",
-      "count": 0
-    },
-    {
-      "date": "2025-07-28",
-      "count": 0
-    },
-    {
-      "date": "2025-07-29",
-      "count": 0
-    },
-    {
-      "date": "2025-07-30",
-      "count": 0
-    },
-    {
-      "date": "2025-07-31",
-      "count": 0
-    },
-    {
-      "date": "2025-08-01",
-      "count": 0
-    },
-    {
-      "date": "2025-08-02",
-      "count": 0
-    },
     {
       "date": "2025-08-03",
       "count": 0
@@ -1551,7 +1523,23 @@
     },
     {
       "date": "2026-07-30",
-      "count": 2
+      "count": 10
+    },
+    {
+      "date": "2026-07-31",
+      "count": 0
+    },
+    {
+      "date": "2026-08-01",
+      "count": 0
+    },
+    {
+      "date": "2026-08-02",
+      "count": 0
+    },
+    {
+      "date": "2026-08-03",
+      "count": 0
     }
   ]
 }
