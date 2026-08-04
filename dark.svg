@@ -65,7 +65,7 @@
     </clipPath>
 
     <clipPath id="clip-ascii-container">
-      <rect x="0" y="34" width="400" height="486" rx="12"/>
+      <rect x="0" y="0" width="400" height="520" rx="12"/>
     </clipPath>
   </defs>
 
@@ -121,11 +121,9 @@
     <path d="M0,12 Q0,0 12,0 L388,0 Q400,0 400,12 L400,34 L0,34 Z" fill="rgba(255,255,255,0.03)"/>
     <text class="terminal-text" x="200" y="22" fill="#64748B" font-size="11" text-anchor="middle">VISUAL_ART.asc</text>
 
-    <g transform="translate(25, 55)">
-      <animateTransform attributeName="transform" type="translate" values="25,55; 25,63; 25,55" dur="6s" repeatCount="indefinite" />
-      
-      <g clip-path="url(#clip-ascii-reveal)">
-        <text xml:space="preserve" class="ascii-text" fill="url(#accentGrad)" font-size="9" font-weight="bold" filter="url(#neonGlow)">
+    <g clip-path="url(#clip-ascii-reveal)">
+      <g transform="translate(25, 55)">
+        <text xml:space="preserve" class="ascii-text" fill="url(#accentGrad)" font-size="9" font-weight="bold">
           <tspan x="3" dy="1.1em">XXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
           <tspan x="3" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
           <tspan x="3" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
