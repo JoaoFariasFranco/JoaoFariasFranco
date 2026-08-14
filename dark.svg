@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 520">
   <defs>
     <radialGradient id="bgGlow" cx="50%" cy="50%" r="100%">
       <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.08" />
@@ -17,7 +17,7 @@
       </stop>
     </linearGradient>
 
-    <linearGradient id="scanlineLaser" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="scanlineLaser" x1="100%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#22D3EE" stop-opacity="0" />
       <stop offset="30%" stop-color="#22D3EE" stop-opacity="0.9" />
       <stop offset="70%" stop-color="#7C3AED" stop-opacity="0.9" />
@@ -33,27 +33,28 @@
     </filter>
 
     <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
+
     <clipPath id="clip-ascii-reveal">
       <rect x="0" y="0" width="400" height="0">
-        <animate attributeName="height" from="0" to="520" dur="2s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+        <animate attributeName="height" from="0" to="430" dur="2s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
       </rect>
     </clipPath>
 
     <clipPath id="clip-line1">
-      <rect x="0" y="-10" width="0" height="60">
+      <rect x="0" y="0" width="0" height="50">
         <animate attributeName="width" from="0" to="650" dur="1s" begin="0.8s" fill="freeze" />
       </rect>
     </clipPath>
 
     <clipPath id="clip-line2">
-      <rect x="0" y="40" width="0" height="50">
+      <rect x="0" y="44" width="0" height="46">
         <animate attributeName="width" from="0" to="650" dur="1.2s" begin="1.9s" fill="freeze" />
       </rect>
     </clipPath>
@@ -65,214 +66,163 @@
     </clipPath>
 
     <clipPath id="clip-ascii-container">
-      <rect x="0" y="0" width="400" height="520" rx="12"/>
+      <rect x="0" y="0" width="400" height="430" rx="12"/>
     </clipPath>
   </defs>
 
-  <style>
-    .text-main { fill: #F8FAFC; }
-    .text-muted { fill: #94A3B8; }
-    .text-accent { fill: #22D3EE; }
-    .text-purple { fill: #A78BFA; }
-    
-    .cursor { animation: blink 0.8s infinite; fill: #22D3EE; }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  <rect width="1180" height="520" rx="12" fill="#030712"/>
+  <rect width="1180" height="520" rx="12" fill="url(#bgGlow)"/>
+  <rect width="1180" height="520" rx="12" filter="url(#noiseFilter)" />
+  <rect x="1.5" y="1.5" width="1177" height="517" rx="11" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.4"/>
 
-    .fade-in-delayed {
-      opacity: 0;
-      animation: fadeIn 0.8s forwards 5.2s;
-    }
-    @keyframes fadeIn { to { opacity: 1; } }
+  <clipPath id="cardClip"><rect width="1180" height="520" rx="12"/></clipPath>
+  <g clip-path="url(#cardClip)">
+    <rect x="0" y="0" width="3" height="520" fill="url(#scanlineLaser)" filter="url(#neonGlow)">
+      <animate attributeName="x" values="-10;1190;-10" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+    </rect>
+  </g>
 
-    .pill { transition: transform 0.2s ease, filter 0.2s ease; cursor: pointer; }
-    .pill:hover { transform: translateY(-2px) scale(1.03); filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5)); }
-
-    /* Estilo para a arte ASCII da esquerda */
-    .ascii-text {
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Courier New", monospace;
-      font-size: 8.5px;      
-      white-space: pre;
-      font-weight: bold;
-    }
-    
-    /* Estilo para as informações da direita */
-    .terminal-text {
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Courier New", monospace;
-      font-size: 13px;       
-      letter-spacing: 0.5px; 
-      font-weight: normal;
-    } 
-  </style>
-
-  <rect width="1180" height="610" rx="16" fill="#030712"/>
-  <rect width="1180" height="610" rx="16" fill="url(#bgGlow)"/>
-  <rect width="1180" height="610" rx="16" filter="url(#noiseFilter)" />
-  <rect x="1.5" y="1.5" width="1177" height="607" rx="15" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.4"/>
-
-  <g fill="#22D3EE" opacity="0.35">
+  <g fill="#22D3EE" opacity="0.3">
     <circle cx="120" cy="480" r="1.5"><animate attributeName="cy" values="480;120;480" dur="14s" repeatCount="indefinite"/></circle>
-    <circle cx="380" cy="180" r="2"><animate attributeName="cy" values="180;520;180" dur="18s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="180" r="2"><animate attributeName="cy" values="180;460;180" dur="18s" repeatCount="indefinite"/></circle>
     <circle cx="850" cy="420" r="1.5"><animate attributeName="cy" values="420;80;420" dur="12s" repeatCount="indefinite"/></circle>
-    <circle cx="1020" cy="220" r="2"><animate attributeName="cy" values="220;500;220" dur="16s" repeatCount="indefinite"/></circle>
+    <circle cx="1020" cy="220" r="2"><animate attributeName="cy" values="220;440;220" dur="16s" repeatCount="indefinite"/></circle>
   </g>
 
   <g transform="translate(35, 45)" clip-path="url(#clip-ascii-container)">
-    <rect width="400" height="520" rx="12" fill="#0F172A" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
+    <rect width="400" height="430" rx="12" fill="#0F172A" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
     <path d="M0,12 Q0,0 12,0 L388,0 Q400,0 400,12 L400,34 L0,34 Z" fill="rgba(255,255,255,0.03)"/>
-    <text class="terminal-text" x="200" y="22" fill="#64748B" font-size="11" text-anchor="middle">VISUAL_ART.asc</text>
+    <text x="200" y="22" fill="#64748B" font-size="11" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-weight="normal" letter-spacing="0.5px">VISUAL_ART.asc</text>
 
     <g clip-path="url(#clip-ascii-reveal)">
-      <g transform="translate(25, 55)">
-        <text xml:space="preserve" class="ascii-text" fill="url(#accentGrad)" font-size="9" font-weight="bold">
-          <tspan x="3" dy="1.1em">XXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNWWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNX0xolloooddkOKXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXXNNNNNNNNNNNXXKo'.  ......':coxOXNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXNXXXNNNNNXKOkko.            .'';lOXNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">XXXXXXXXXXXXXXXXNXXNNNN0dc,,:,               ...:dKNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">KXXXXXXXXXXXXXXXNNXNNNKd,..........';;;,''..    .'l0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">KKXXXXXXXXXXXXXXNXXNNNO:... .';cccclooolllc;'.  ..'oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">KKXXXXXXXXXXXXXXNXXXXN0c.. .,:cloooodddddolll:.....c0NNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">KKKXXXXXXXXXXXXXXXNXXNXx,..;coddxxxxxkkkkxdool:'...oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">KKKKXXXXXXXXXXXXXXXXNNNXk::c:;,,,:clc::;;;:clooc,.;0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">KKKKKXXXXXXXXXXXXXXXXXXNXko:'.....,:,....''';cdo;;kNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
-          <tspan x="3" dy="1.1em">KKKKKKKXXXXXXXXXXXXXXXXNOllc'... .:d:.......;coocckKNNNNNNNNNNNNNNNNNNNNXXX</tspan>
-          <tspan x="3" dy="1.1em">KKKKKKKKXXXXXXXXXXXXXXXXkcll:,''';dkl;;,',;:loxxl:ckNNNXNNNNNNNNNNNNNXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">KKKKKKKKKXXXXXXXXXXXXXXXKxllc::;cok0Oxollooooddxl:dKNNNNXNXXNNXNNNNNXXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">KKKKKKKKKKKXXXXXXXXXXXXXX0lccc::::ccclldxxdollodoxKNNNXNNXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">KKKKKKKKKKKKKXXXXXXXXXXXXXklcccc:;;;:coxkxxollloxKNNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">KKKKKKKKKKKKKKKKXXXXXXXXXXXklc:,''',,,,;:looc:cdkKXNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">KKKKKKKKKKKKKKKKKKXXXXXXXXXKOo;','',,,,,;;::;;c:;xNXXXXXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">00KKKKKKKKKKKKKKKKKKXXXKXXXXX0o;,,,;;;;;;,'';:c,'lO0KXXXXXXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">0000KKKKKKKKKKKKKKKKKKKKXKKXXX0c..........';clo;.;llkXXXKKXXXXXXXXXXXXXXXXX</tspan>
-          <tspan x="3" dy="1.1em">0000000KKKKKKKKKKKKKKKKKXKKKKXKk:'.......,clodd:'',lO0OdldOKXXXXKKKXXXKXXXX</tspan>
-          <tspan x="3" dy="1.1em">00000000KKKKKKKKKKKKKKKKKKKKK00kl:;;;;;;:clloddl,:ddlc;:clodxxdlccclx0XXXXX</tspan>
-          <tspan x="3" dy="1.1em">0000000000KKKKKKKKKKKKKKKKKOc,,''.'',,,,;,'';ol;',,'',;:;,,'...     .'lOXXX</tspan>
-          <tspan x="3" dy="1.1em">00000000000KKKKKKKKKKKKKKK0o............... 'c' .',,,;;'...   .,:c:;;,.'dKX</tspan>
-          <tspan x="3" dy="1.1em">0000000000000KKKKKKKKKKK0kl,................,,..,,,,;,.      '::;;;:ll:',xK</tspan>
-          <tspan x="3" dy="1.1em">0000000000000000KKKKKK0kl'...................  ';,;;,.      .,,,,,,;:llc,:k</tspan>
-          <tspan x="3" dy="1.1em">0000000000000000000KKKk;. .,;'.............   .,;;;:.       .''',,'',;cll,,</tspan>
-          <tspan x="3" dy="1.1em">O000000000000000000KKK0x:.;oxxoc;'.........   ',;;:,.        ...,,'''';:lo:</tspan>
-          <tspan x="3" dy="1.1em">OOO0000000000000000KKKKKd;...':oxxoc;'..... ..,,,,'.         ...'',,''',:ld</tspan>
-          <tspan x="3" dy="1.1em">OOOOO000000000000000K0Kx:....  .':lxkOxl'. ..,,,,.           .....',;,.'',c</tspan>
-          <tspan x="3" dy="1.1em">OOOOO0000000000000000K0l'.,;. .   .:odxkxo:;,,,,.             .....';;,'..'</tspan>
-          <tspan x="3" dy="1.1em">OOOO00O00000000000000K0l..::',,,.  .;llodk0kl,,.               .....,::;'..</tspan>
-          <tspan x="3" dy="1.4em" fill="#22D3EE">    &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
+      <g transform="translate(26, 47)">
+        <text xml:space="preserve" fill="url(#accentGrad)" font-size="8.4" font-weight="bold" font-family="Consolas, 'Courier New', monospace">
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNWWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNX0xolloooddkOKXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXXXXXXNNNNNNNNNNNXXKo'.  ......':coxOXNNNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXXXXXNXXXNNNNNXKOkko.            .'';lOXNNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">XXXXXXXXXXXXXXXXNXXNNNN0dc,,:,               ...:dKNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KXXXXXXXXXXXXXXXNNXNNNKd,..........';;;,''..    .'l0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKXXXXXXXXXXXXXXNXXNNNO:... .';cccclooolllc;'.  ..'oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKXXXXXXXXXXXXXXNXXXXN0c.. .,:cloooodddddolll:.....c0NNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKXXXXXXXXXXXXXXXNXXNXx,..;coddxxxxxkkkkxdool:'...oXNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKXXXXXXXXXXXXXXXXNNNXk::c:;,,,:clc::;;;:clooc,.;0NNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKXXXXXXXXXXXXXXXXXXNXko:'.....,:,....''';cdo;;kNNNNNNNNNNNNNNNNNNNNNNNN</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKKKXXXXXXXXXXXXXXXXNOllc'... .:d:.......;coocckKNNNNNNNNNNNNNNNNNNNNXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKKKKXXXXXXXXXXXXXXXXkcll:,''';dkl;;,',;:loxxl:ckNNNXNNNNNNNNNNNNNXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKKKKKXXXXXXXXXXXXXXXKxllc::;cok0Oxollooooddxl:dKNNNNXNXXNNXNNNNNXXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKKKKKKKXXXXXXXXXXXXXX0lccc::::ccclldxxdollodoxKNNNXNNXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKKKKKKKKKXXXXXXXXXXXXXklcccc:;;;:coxkxxollloxKNNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKKKKKKKKKKKKXXXXXXXXXXXklc:,''',,,,;:looc:cdkKXNXXNXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">KKKKKKKKKKKKKKKKKKXXXXXXXXXKOo;','',,,,,;;::;;c:;xNXXXXXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">00KKKKKKKKKKKKKKKKKKXXXKXXXXX0o;,,,;;;;;;,'';:c,'lO0KXXXXXXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">0000KKKKKKKKKKKKKKKKKKKKXKKXXX0c..........';clo;.;llkXXXKKXXXXXXXXXXXXXXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">0000000KKKKKKKKKKKKKKKKKXKKKKXKk:'.......,clodd:'',lO0OdldOKXXXXKKKXXXKXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">00000000KKKKKKKKKKKKKKKKKKKKK00kl:;;;;;;:clloddl,:ddlc;:clodxxdlccclx0XXXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">0000000000KKKKKKKKKKKKKKKKKOc,,''.'',,,,;,'';ol;',,'',;:;,,'...     .'lOXXX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">00000000000KKKKKKKKKKKKKKK0o............... 'c' .',,,;;'...   .,:c:;;,.'dKX</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">0000000000000KKKKKKKKKKK0kl,................,,..,,,,;,.      '::;;;:ll:',xK</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">0000000000000000KKKKKK0kl'...................  ';,;;,.      .,,,,,,;:llc,:k</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">0000000000000000000KKKk;. .,;'.............   .,;;;:.       .''',,'',;cll,,</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">O000000000000000000KKK0x:.;oxxoc;'.........   ',;;:,.        ...,,'''';:lo:</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">OOO0000000000000000KKKKKd;...':oxxoc;'..... ..,,,,'.         ...'',,''',:ld</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">OOOOO000000000000000K0Kx:....  .':lxkOxl'. ..,,,,.           .....',;,.'',c</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">OOOOO0000000000000000K0l'.,;. .   .:odxkxo:;,,,,.             .....';;,'..'</tspan>
+          <tspan x="0" dy="1.1em" textLength="347" lengthAdjust="spacingAndGlyphs">OOOO00O00000000000000K0l..::',,,.  .;llodk0kl,,.               .....,::;'..</tspan>
+          <tspan x="0" dy="1.4em" fill="#22D3EE">    &lt; SYSTEM_INITIALIZED /&gt;    </tspan>
         </text>
       </g>
     </g>
   </g>
 
   <g transform="translate(465, 45)">
-    <rect width="680" height="520" rx="12" fill="#0F172A" fill-opacity="0.75" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
+    <rect width="680" height="430" rx="12" fill="#0F172A" fill-opacity="0.75" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
     <path d="M0,12 Q0,0 12,0 L668,0 Q680,0 680,12 L680,38 L0,38 Z" fill="rgba(255,255,255,0.03)"/>
     <circle cx="22" cy="19" r="5" fill="#FF5F56"/>
     <circle cx="38" cy="19" r="5" fill="#FFBD2E"/>
     <circle cx="54" cy="19" r="5" fill="#27C93F"/>
     
-    <text class="terminal-text" x="340" y="23" fill="#64748B" font-size="12" text-anchor="middle">bash - profile.sh</text>
+    <text x="340" y="23" fill="#64748B" font-size="12" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-weight="normal" letter-spacing="0.5px">bash - profile.sh</text>
 
-    <g transform="translate(35, 65)" class="terminal-text">
+    <g transform="translate(35, 65)" font-family="Consolas, 'Courier New', monospace" font-weight="normal" letter-spacing="0.5px">
       
       <g clip-path="url(#clip-line1)">
-        <text class="text-main" font-size="28" font-weight="700" y="25">
+        <text font-size="28" font-weight="700" fill="#F8FAFC" y="25" font-family="Consolas, 'Courier New', monospace" letter-spacing="0.5px">
           Hi, I'm <tspan fill="url(#accentGrad)">João Franco</tspan>
         </text>
       </g>
 
       <g clip-path="url(#clip-line2)">
-        <text class="text-accent" font-size="17" font-weight="600" y="62">
-          &gt; Full Stack Developer &amp; UI Engineer
+        <text font-size="17" font-weight="600" fill="#94A3B8" y="62" font-family="Consolas, 'Courier New', monospace" letter-spacing="0.5px">
+          > Full Stack Developer &#38; UI Engineer
         </text>
       </g>
 
       <g clip-path="url(#clip-details)">
-        <g transform="translate(0, 105)" font-size="14">
-          <text class="text-purple" font-weight="600" x="0" y="0">Subject:</text>
-          <text class="text-main" x="120" y="0">Full Stack</text>
+        <g transform="translate(0, 105)" font-size="14" font-family="Consolas, 'Courier New', monospace" letter-spacing="0.5px">
+          <text font-weight="600" fill="#A78BFA" x="0" y="0">Subject:</text>
+          <text font-weight="normal" fill="#F8FAFC" x="120" y="0">Full Stack</text>
 
-          <text class="text-purple" font-weight="600" x="0" y="28">Location:</text>
-          <text class="text-main" x="120" y="28">Brazil / Remote</text>
+          <text font-weight="600" fill="#A78BFA" x="0" y="28">Location:</text>
+          <text font-weight="normal" fill="#F8FAFC" x="120" y="28">Brazil / Remote</text>
 
-          <text class="text-purple" font-weight="600" x="0" y="56">Education:</text>
-          <text class="text-main" x="120" y="56">Estacio</text>
+          <text font-weight="600" fill="#A78BFA" x="0" y="56">Education:</text>
+          <text font-weight="normal" fill="#F8FAFC" x="120" y="56">Estacio</text>
 
-          <text class="text-purple" font-weight="600" x="0" y="84">Focus:</text>
-          <text class="text-main" x="120" y="84">High-performance &amp; Distributed Systems</text>
+          <text font-weight="600" fill="#A78BFA" x="0" y="84">Focus:</text>
+          <text font-weight="normal" fill="#F8FAFC" x="120" y="84">High-performance &#38; Distributed Systems</text>
 
-          <text class="text-purple" font-weight="600" x="0" y="112">Contact:</text>
-          <text class="text-accent" x="120" y="112">joao.franco.biz@gmail.com</text>
+          <text font-weight="600" fill="#A78BFA" x="0" y="112">Contact:</text>
+          <text font-weight="normal" fill="#94A3B8" x="120" y="112">joao.franco.biz@gmail.com</text>
         </g>
       </g>
 
-      <rect clip-path="url(#clip-details)" class="cursor" x="325" y="200" width="9" height="17" rx="1" />
+      <rect clip-path="url(#clip-details)" x="325" y="200" width="9" height="17" rx="1" fill="#22D3EE">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
 
-      <line x1="0" y1="250" x2="610" y2="250" stroke="rgba(255,255,255,0.08)" stroke-width="1" class="fade-in-delayed"/>
+      <line x1="0" y1="250" x2="610" y2="250" stroke="rgba(255,255,255,0.08)" stroke-width="1" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.8s" fill="freeze"/>
+      </line>
 
-      <g transform="translate(0, 275)" class="fade-in-delayed">
-        <text font-size="15" font-weight="700" fill="#F8FAFC" y="0">Core Tech Stack</text>
+      <g transform="translate(0, 275)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" begin="2s" dur="0.8s" fill="freeze"/>
+        <text font-size="15" font-weight="700" fill="#F8FAFC" y="0" font-family="Consolas, 'Courier New', monospace" letter-spacing="0.5px">Core Tech Stack</text>
         
         <g transform="translate(0, 16)">
-          <g class="pill" transform="translate(0,0)">
+          <g transform="translate(0,0)">
             <rect width="80" height="30" rx="15" fill="rgba(34,211,238,0.1)" stroke="#22D3EE" stroke-width="1"/>
             <text font-size="12" fill="#22D3EE" x="40" y="19" text-anchor="middle" font-weight="600">SQL</text>
           </g>
-          <g class="pill" transform="translate(90,0)">
+          <g transform="translate(90,0)">
             <rect width="85" height="30" rx="15" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1"/>
             <text font-size="12" fill="#A78BFA" x="42.5" y="19" text-anchor="middle" font-weight="600">Azure</text>
           </g>
-          <g class="pill" transform="translate(185,0)">
+          <g transform="translate(185,0)">
             <rect width="85" height="30" rx="15" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="1"/>
             <text font-size="12" fill="#10B981" x="42.5" y="19" text-anchor="middle" font-weight="600">Node.js</text>
           </g>
-          <g class="pill" transform="translate(280,0)">
+          <g transform="translate(280,0)">
             <rect width="105" height="30" rx="15" fill="rgba(34,211,238,0.1)" stroke="#22D3EE" stroke-width="1"/>
             <text font-size="12" fill="#22D3EE" x="52.5" y="19" text-anchor="middle" font-weight="600">Microsoft</text>
           </g>
-          <g class="pill" transform="translate(395,0)">
+          <g transform="translate(395,0)">
             <rect width="85" height="30" rx="15" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
             <text font-size="12" fill="#E2E8F0" x="42.5" y="19" text-anchor="middle" font-weight="600">Docker</text>
           </g>
-          <g class="pill" transform="translate(490,0)">
+          <g transform="translate(490,0)">
             <rect width="80" height="30" rx="15" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1"/>
             <text font-size="12" fill="#A78BFA" x="40" y="19" text-anchor="middle" font-weight="600">Python</text>
           </g>
         </g>
       </g>
 
-      <g transform="translate(0, 385)" class="fade-in-delayed">
-        
-        <a href="https://github.com/JoaoFariasFranco" target="_blank" rel="noopener noreferrer">
-          <g class="pill" transform="translate(0,0)">
-            <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-            <path d="M16 8C11.58 8 8 11.58 8 16c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0024 16c0-4.42-3.58-8-8-8z" fill="#F8FAFC"/>
-          </g>
-        </a>
-
-        <a href="https://www.linkedin.com/in/joão-pedro-farias-franco-75bb70210?utm_source=share_via" target="_blank" rel="noopener noreferrer">
-          <g class="pill" transform="translate(45,0)">
-            <circle cx="16" cy="16" r="16" fill="rgba(34,211,238,0.08)" stroke="#22D3EE" stroke-width="1"/>
-            <path d="M12 11h2.5v1.5h.05c.35-.66 1.2-1.35 2.45-1.35 2.62 0 3.1 1.73 3.1 3.98V20H17.5v-4.37c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3V20H12V11zm-3-2a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-1.25 2h2.5V20h-2.5V11z" fill="#22D3EE"/>
-          </g>
-        </a>
-
-        <a href="mailto:joao.franco.biz@gmail.com" rel="noopener noreferrer">
-          <g class="pill" transform="translate(90,0)">
-            <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-            <path transform="translate(4, 4)" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-8V6l8 5 8-5v2z" fill="#F8FAFC"/>
-          </g>
-        </a>
-
-      </g>
     </g>
   </g>
-
-  <rect x="0" y="0" width="1180" height="3" fill="url(#scanlineLaser)" filter="url(#neonGlow)">
-    <animate attributeName="y" values="-10;610;-10" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
-  </rect>
 </svg>
