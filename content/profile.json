@@ -1,0 +1,76 @@
+{
+  "username": "JoaoFariasFranco",
+  "name": "João Franco",
+  "role": "Full Stack Developer & UI Engineer",
+  "details": [
+    {
+      "label": "Subject:",
+      "value": "Full Stack"
+    },
+    {
+      "label": "Location:",
+      "value": "Brazil / Remote"
+    },
+    {
+      "label": "Education:",
+      "value": "Estacio"
+    },
+    {
+      "label": "Focus:",
+      "value": "High-performance & Distributed Systems"
+    },
+    {
+      "label": "Contact:",
+      "value": "joao.franco.biz@gmail.com",
+      "cursor": true
+    }
+  ],
+  "chips": [
+    {
+      "label": "SQL",
+      "color": "cy"
+    },
+    {
+      "label": "Azure",
+      "color": "pu"
+    },
+    {
+      "label": "Node.js",
+      "color": "gr"
+    },
+    {
+      "label": "Microsoft",
+      "color": "cy"
+    },
+    {
+      "label": "Docker",
+      "color": "wt"
+    },
+    {
+      "label": "Python",
+      "color": "pu"
+    }
+  ],
+  "links": [
+    {
+      "label": "❯ GitHub",
+      "color": "gr",
+      "href": "https://github.com/JoaoFariasFranco"
+    },
+    {
+      "label": "❯ LinkedIn",
+      "color": "cy",
+      "href": "https://www.linkedin.com/in/jo%C3%A3o-pedro-farias-franco-75bb70210"
+    },
+    {
+      "label": "❯ Portfólio",
+      "color": "pu",
+      "href": "https://joaofariasfranco.github.io/portfolio/"
+    },
+    {
+      "label": "❯ E-mail",
+      "color": "am",
+      "href": "mailto:joao.franco.biz@gmail.com"
+    }
+  ]
+}
